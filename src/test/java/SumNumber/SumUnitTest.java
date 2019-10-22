@@ -33,4 +33,10 @@ public class SumUnitTest {
 		Sum s = new Sum();
 		assertEquals(1, s.subtract(3, 2));
 	}
+	
+	@Test
+	public void test4() {
+		SumTest st = new SumTest();
+			st.main(null);
+	}
 }
