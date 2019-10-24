@@ -6,19 +6,17 @@ pipeline {
                      sh './gradlew clean'
                  }
                  }
+		 
                  stage('build') {
                  steps {
-                    echo "build"
+                    sh '.gradlew build'
                  }
                  }
+		 
                  stage('test') {
-                 when {
-                       not {
-                            branch "master"
-                       }
-                 }
+         
                  steps {
-                       echo "Test"
+                       sh './gradlew test'
                  }
                  }
        
