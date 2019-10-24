@@ -35,4 +35,9 @@ public class SumUnitTest {
 		SumTest st = new SumTest();
 			st.main(null);
 	}
+	
+	@Test
+	public void fail() {
+		assertTrue(false);
+	}
 }
