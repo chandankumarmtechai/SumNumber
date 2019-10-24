@@ -1,24 +1,24 @@
 pipeline {
          agent any
          stages {
-                 stage('One') {
+                 stage('clean') {
                  steps {
-                     echo 'Hi, this is Zulaikha from edureka'
+                     sh './gradlew clean'
                  }
                  }
-                 stage('Two') {
+                 stage('build') {
                  steps {
-                    input('Do you want to proceed?')
+                    echo "build"
                  }
                  }
-                 stage('Three') {
+                 stage('test') {
                  when {
                        not {
                             branch "master"
                        }
                  }
                  steps {
-                       echo "Hello"
+                       echo "Test"
                  }
                  }
        
