@@ -19,6 +19,11 @@ pipeline {
                        sh './gradlew test'
                  }
                  }
+
+		 stage('report') {
+		      sh './gradlew cloverGenerateReport'
+		 
+		 }
        
               }
 }
