@@ -17,10 +17,6 @@ public class SumUnitTest {
 		assertNotNull(s);
 	}
 	
-	@Test
-	public void fake() {
-		assertTrue(false);
-	}
 	
 	@Test
 	public void test2() {
